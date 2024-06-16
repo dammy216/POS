@@ -37,10 +37,10 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.sallesButton = new System.Windows.Forms.Button();
             this.subscribeButton = new System.Windows.Forms.Button();
             this.PurchaseButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.stockButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -115,14 +115,15 @@
             this.columnHeader4.Text = "販売価格×販売数";
             this.columnHeader4.Width = 150;
             // 
-            // button1
+            // sallesButton
             // 
-            this.button1.Location = new System.Drawing.Point(85, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "販売処理";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sallesButton.Location = new System.Drawing.Point(85, 157);
+            this.sallesButton.Name = "sallesButton";
+            this.sallesButton.Size = new System.Drawing.Size(75, 23);
+            this.sallesButton.TabIndex = 5;
+            this.sallesButton.Text = "販売処理";
+            this.sallesButton.UseVisualStyleBackColor = true;
+            this.sallesButton.Click += new System.EventHandler(this.sallesButton_Click);
             // 
             // subscribeButton
             // 
@@ -136,7 +137,7 @@
             // 
             // PurchaseButton
             // 
-            this.PurchaseButton.Location = new System.Drawing.Point(85, 245);
+            this.PurchaseButton.Location = new System.Drawing.Point(85, 239);
             this.PurchaseButton.Name = "PurchaseButton";
             this.PurchaseButton.Size = new System.Drawing.Size(75, 23);
             this.PurchaseButton.TabIndex = 7;
@@ -144,18 +145,19 @@
             this.PurchaseButton.UseVisualStyleBackColor = true;
             this.PurchaseButton.Click += new System.EventHandler(this.PurchaseButton_Click);
             // 
-            // button4
+            // stockButton
             // 
-            this.button4.Location = new System.Drawing.Point(85, 286);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "在庫一覧";
-            this.button4.UseVisualStyleBackColor = true;
+            this.stockButton.Location = new System.Drawing.Point(85, 281);
+            this.stockButton.Name = "stockButton";
+            this.stockButton.Size = new System.Drawing.Size(75, 23);
+            this.stockButton.TabIndex = 8;
+            this.stockButton.Text = "在庫一覧";
+            this.stockButton.UseVisualStyleBackColor = true;
+            this.stockButton.Click += new System.EventHandler(this.stockButton_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(85, 341);
+            this.button5.Location = new System.Drawing.Point(85, 326);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 9;
@@ -168,10 +170,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.stockButton);
             this.Controls.Add(this.PurchaseButton);
             this.Controls.Add(this.subscribeButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.sallesButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -195,10 +197,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sallesButton;
         private System.Windows.Forms.Button subscribeButton;
         private System.Windows.Forms.Button PurchaseButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button stockButton;
         private System.Windows.Forms.Button button5;
     }
 }

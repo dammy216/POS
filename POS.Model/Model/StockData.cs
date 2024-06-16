@@ -8,16 +8,16 @@ namespace POS.Model.Model
 {
     public class StockData
     {
-        public string Name {  get; set; }
-        public DateTime PurchaseDate { get; set; }
+        public string PurchaseName {  get; set; }
+        public string PurchaseDate { get; set; }
         public int PurchasePrice {  get; set; }
         public int SallesPrice {  get; set; }
         public int StockAmount { get; set; }
 
         public StockData(string name, int stockAmount ,int purchasePrice, int sallesPrice )
         {
-            Name = name;
-            PurchaseDate = DateTime.Today;
+            PurchaseName = name;
+            PurchaseDate = DateTime.Today.ToString("yyyy-MM-dd");
             PurchasePrice = purchasePrice;
             SallesPrice = sallesPrice;
             StockAmount = stockAmount;

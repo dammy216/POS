@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.stockListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -36,21 +36,21 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // listView1
+            // stockListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(29, 46);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(507, 263);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.stockListView.HideSelection = false;
+            this.stockListView.Location = new System.Drawing.Point(29, 46);
+            this.stockListView.Name = "stockListView";
+            this.stockListView.Size = new System.Drawing.Size(507, 263);
+            this.stockListView.TabIndex = 0;
+            this.stockListView.UseCompatibleStateImageBehavior = false;
+            this.stockListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -82,7 +82,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 396);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.stockListView);
             this.Name = "Stock";
             this.Text = "Stock";
             this.ResumeLayout(false);
@@ -91,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView stockListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

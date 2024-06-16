@@ -21,12 +21,27 @@ namespace POS.View
 
         private void subscribeButton_Click(object sender, EventArgs e)
         {
+            if(_instance.isEmpty(productTB.Text))
+            {
+                messageText.ForeColor = Color.Red;
+                messageText.Text = "商品名を入力してください";
+                return;
+            }
+
             if (_instance.AddProduct(productTB.Text))
+            {
+                messageText.ForeColor = Color.Red;
                 messageText.Text = "その商品は存在しています";
+            }
             else
+            {
+                messageText.ForeColor = Color.Green;
                 messageText.Text = "登録しました！";
+            }
 
                 productTB.Text = "";
         }
+
+        
     }
 }

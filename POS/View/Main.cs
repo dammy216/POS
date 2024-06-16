@@ -29,5 +29,17 @@ namespace POS
             var purchase = new Purchase();
             purchase.ShowDialog();
         }
+
+        private void stockButton_Click(object sender, EventArgs e)
+        {
+            var stock = new Stock();
+            stock.ShowDialog();
+        }
+
+        private void sallesButton_Click(object sender, EventArgs e)
+        {
+            var sales = new Seles();
+            sales.ShowDialog();
+        }
     }
 }

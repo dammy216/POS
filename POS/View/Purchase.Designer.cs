@@ -30,16 +30,17 @@
         {
             this.productNameListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.addButton = new System.Windows.Forms.Button();
+            this.amountNB = new System.Windows.Forms.NumericUpDown();
+            this.purchasePriceNB = new System.Windows.Forms.NumericUpDown();
+            this.SellesPriceNB = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.messageText = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.amountNB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasePriceNB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellesPriceNB)).BeginInit();
             this.SuspendLayout();
             // 
             // productNameListView
@@ -59,35 +60,37 @@
             this.columnHeader1.Text = "商品名";
             this.columnHeader1.Width = 100;
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Location = new System.Drawing.Point(297, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "追加";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addButton.Location = new System.Drawing.Point(297, 338);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "追加";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // numericUpDown1
+            // amountNB
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(287, 80);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 19);
-            this.numericUpDown1.TabIndex = 2;
+            this.amountNB.Location = new System.Drawing.Point(287, 80);
+            this.amountNB.Name = "amountNB";
+            this.amountNB.Size = new System.Drawing.Size(120, 19);
+            this.amountNB.TabIndex = 2;
             // 
-            // numericUpDown2
+            // purchasePriceNB
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(287, 155);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 19);
-            this.numericUpDown2.TabIndex = 3;
+            this.purchasePriceNB.Location = new System.Drawing.Point(287, 155);
+            this.purchasePriceNB.Name = "purchasePriceNB";
+            this.purchasePriceNB.Size = new System.Drawing.Size(120, 19);
+            this.purchasePriceNB.TabIndex = 3;
             // 
-            // numericUpDown3
+            // SellesPriceNB
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(287, 240);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 19);
-            this.numericUpDown3.TabIndex = 4;
+            this.SellesPriceNB.Location = new System.Drawing.Point(287, 240);
+            this.SellesPriceNB.Name = "SellesPriceNB";
+            this.SellesPriceNB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SellesPriceNB.Size = new System.Drawing.Size(120, 19);
+            this.SellesPriceNB.TabIndex = 4;
             // 
             // label1
             // 
@@ -116,24 +119,34 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "販売価格";
             // 
+            // messageText
+            // 
+            this.messageText.AutoSize = true;
+            this.messageText.ForeColor = System.Drawing.Color.Red;
+            this.messageText.Location = new System.Drawing.Point(287, 296);
+            this.messageText.Name = "messageText";
+            this.messageText.Size = new System.Drawing.Size(0, 12);
+            this.messageText.TabIndex = 8;
+            // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 423);
+            this.Controls.Add(this.messageText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SellesPriceNB);
+            this.Controls.Add(this.purchasePriceNB);
+            this.Controls.Add(this.amountNB);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.productNameListView);
             this.Name = "Purchase";
             this.Text = "Purches";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amountNB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasePriceNB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellesPriceNB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,12 +156,13 @@
 
         private System.Windows.Forms.ListView productNameListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.NumericUpDown amountNB;
+        private System.Windows.Forms.NumericUpDown purchasePriceNB;
+        private System.Windows.Forms.NumericUpDown SellesPriceNB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label messageText;
     }
 }

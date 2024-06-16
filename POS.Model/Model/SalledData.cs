@@ -12,7 +12,7 @@ namespace POS.Model.Model
         public int SalledPrice { get; set; }
         public int SalledAmount {  get; set; }
         public int SalledSubTotal {  get; set; }
-        public DateTime SalledDate { get; set; }
+        public string SalledDate { get; set; }
 
         public SalledData(string salledProductName, int salledPrice, int salledAmount, int salledSubTotal)
         {
@@ -20,7 +20,7 @@ namespace POS.Model.Model
             SalledPrice = salledPrice;
             SalledAmount = salledAmount;
             SalledSubTotal = salledSubTotal;
-            SalledDate = DateTime.Today;
+            SalledDate = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
     }

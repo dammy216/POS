@@ -66,11 +66,11 @@
     <Compile Include="View\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Sales.cs">
+    <Compile Include="View\Seles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <Compile Include="View\Seles.Designer.cs">
+      <DependentUpon>Seles.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Stock.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="View\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <EmbeddedResource Include="View\Seles.resx">
+      <DependentUpon>Seles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>

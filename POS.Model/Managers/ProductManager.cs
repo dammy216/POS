@@ -39,7 +39,16 @@ namespace POS.Model.Managers
 
         public string DisplaySubscribeProduct(ProductData product)
         {
-            return product.ProductName;
+            var name = product.ProductName;
+            return name;
+        }
+
+        public bool isEmpty(string productName)
+        {
+            if (productName == "")
+                return true;
+
+            return false;
         }
     }
 }

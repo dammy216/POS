@@ -7,17 +7,33 @@ using System.Threading.Tasks;
 
 namespace POS.Model.Managers
 {
-    public class SalledManager
+    public class SelesManager
     {
         private List<SalledData> _salledList = new List<SalledData>();
         public List<SalledData> SalledList { get {  return _salledList; } }
+        private static SelesManager _instance;
 
-        public void AddStock(string salledName, int salledPrice, int salledAmount)
+        private SelesManager()
+        {
+        }
+
+        public static SelesManager GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new SelesManager();
+                return _instance;
+            }
+            return _instance;
+        }
+
+        public void AddSeles(string salledName, int salledPrice, int salledAmount)
         {
             var salledData = new SalledData(salledName, salledPrice, salledAmount, CalcSubTotal(salledPrice, salledAmount));
             _salledList.Add(salledData);
         }
 
+        //販売数×価格の計算
         private int CalcSubTotal(int salledPrice, int salledAmount)
         {
             int subTotal = salledPrice * salledAmount;
@@ -34,7 +50,7 @@ namespace POS.Model.Managers
         //"今日"の売り上げ金額を求める
         public int CalcSalledTodayPrice()
         {
-            DateTime today = DateTime.Today;
+            string today = DateTime.Today.ToString("yyyy-MM-dd");
 
             int salledTodayPrice = _salledList.Where(item => item.SalledDate == today).Sum(item => item.SalledSubTotal);
             return salledTodayPrice;
@@ -49,5 +65,7 @@ namespace POS.Model.Managers
         //    if(stockList.Any(item => item.Name == _salledList.N)
         //}
         //--------------------------------------------------------------------------------------------
+
+        
     }
 }

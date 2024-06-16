@@ -53,6 +53,7 @@
             // messageText
             // 
             this.messageText.AutoSize = true;
+            this.messageText.ForeColor = System.Drawing.Color.Red;
             this.messageText.Location = new System.Drawing.Point(46, 96);
             this.messageText.Name = "messageText";
             this.messageText.Size = new System.Drawing.Size(0, 12);
