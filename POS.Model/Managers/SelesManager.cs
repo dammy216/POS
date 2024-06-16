@@ -48,13 +48,41 @@ namespace POS.Model.Managers
         }
 
         //"今日"の売り上げ金額を求める
-        public int CalcSalledTodayPrice()
+        public int CalcSelledTodayPrice()
         {
             string today = DateTime.Today.ToString("yyyy-MM-dd");
 
             int salledTodayPrice = _salledList.Where(item => item.SalledDate == today).Sum(item => item.SalledSubTotal);
             return salledTodayPrice;
         }
+
+        public void SellesFromStock(List<StockData> stockDatas, List<CartData> cartDatas)
+        {
+            foreach (var cartData in cartDatas)
+            {
+                // 対応するStockDataを探す（ここではProductNameを基準にする）
+                var correspondingStock = stockDatas.Where(s => s.PurchaseName == cartData.ProductName);
+
+                if (correspondingStock.Any())
+                {
+                    // StockDataのAmountからCartDataのAmountを引く
+                    foreach (var stock in correspondingStock)
+                    {
+                        stock.StockAmount -= cartData.AddproductAmount;
+                    }
+                }
+                else
+                {
+                    // エラー処理またはログ出力など
+                    Console.WriteLine($"CartDataに対応するStockDataが見つかりませんでした。 CartData Id:");
+                    // 必要に応じてエラー処理を追加する
+                }
+            }
+        }
+
+    }
+}
+
 
         //利益の計算メソッドはどのクラスに作るか問題解決まで放置-------------------------------------
         //public int CalcProfitTotalPrice()
@@ -67,5 +95,4 @@ namespace POS.Model.Managers
         //--------------------------------------------------------------------------------------------
 
         
-    }
-}
+
