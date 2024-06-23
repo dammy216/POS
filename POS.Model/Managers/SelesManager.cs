@@ -80,19 +80,17 @@ namespace POS.Model.Managers
             }
         }
 
+        public int CalcTotalProfit()
+        {
+            var stockInstance = StockManager.GetInstance();
+            var stockList = stockInstance.StockList;
+
+            if (stockList.Any(item => item.Name == _salledList.N)
+        }
+
     }
 }
 
 
-        //利益の計算メソッドはどのクラスに作るか問題解決まで放置-------------------------------------
-        //public int CalcProfitTotalPrice()
-        //{
-        //    var stockManager = new StockManager();
-        //    var stockList = stockManager.StockList;
 
-        //    if(stockList.Any(item => item.Name == _salledList.N)
-        //}
-        //--------------------------------------------------------------------------------------------
-
-        
 
